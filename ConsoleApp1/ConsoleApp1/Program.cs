@@ -2,29 +2,18 @@
 
 using System;
 
-class Program
+static int CalculateMax(int[] values)
 {
-    static void Main(string[] args)
+    if (values == null || values.Length == 0)
+        throw new ArgumentException("Array is empty");
+
+    int max = values[0];
+
+    foreach (int v in values)
     {
-        int[] numbers = { 2, 4, 6, 8 };
-        
-        double avg = CalculateAverage(numbers);
-
-        Console.WriteLine("Average: " + avg);
+        if (v > max)
+            max = v;
     }
-    
-    static double CalculateAverage(int[] values)
-    {
-        if (values == null || values.Length == 0)
-            return 0;
 
-        int sum = 0;
-
-        foreach (int v in values)
-        {
-            sum += v;
-        }
-
-        return (double)sum / values.Length;
-    }
+    return max;
 }
