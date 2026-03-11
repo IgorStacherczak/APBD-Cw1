@@ -11,6 +11,8 @@ class Program
         double avg = CalculateAverage(numbers);
 
         Console.WriteLine("Average: " + avg);
+        
+        Console.WriteLine("Witaj");
     }
     
     static double CalculateAverage(int[] values)
