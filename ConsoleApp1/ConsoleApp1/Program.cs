@@ -5,5 +5,6 @@ using System;
 static int CalculateMin(int[] values)
 {
 
+    return 1;
     return 3;
 }
